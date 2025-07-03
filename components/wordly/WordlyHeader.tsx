@@ -19,11 +19,20 @@ function WordlyHeader() {
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Are you absolutely sure?</DialogTitle>
-              <DialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </DialogDescription>
+              <DialogTitle>Nice Try!</DialogTitle>
+              <DialogDescription className="text-center">The answer was:</DialogDescription>
+              <div className="flex flex-col items-center justify-center">
+                <span className="border border-primary-gray bg-secondary-gray border-dashed w-fit px-2 py-1 font-semibold">
+                  {"FLAME"}
+                </span>
+                <a
+                  className="text-blue-500 text-sm mt-2"
+                  href={`https://wordfind.org/dictionary`}
+                  target="_blank"
+                >
+                  What does this word mean?
+                </a>
+              </div>
             </DialogHeader>
           </DialogContent>
         </Dialog>
@@ -64,11 +73,59 @@ function WordlyHeader() {
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Are you absolutely sure? info</DialogTitle>
+              <DialogTitle>How To Play</DialogTitle>
               <DialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
+                You have to guess the hidden word in 6 tries and the color of
+                the letters changes to show how close you are. To start the
+                game, just enter any word, for example:
               </DialogDescription>
+              <div className="flex w-full gap-4 justify-center">
+                <div className="row-letter w-[4rem] h-[4rem] bg-primary-green rounded-lg border-2 border-primary-green text-white flex items-center justify-center font-bold text-[28px]">
+                  <span>F</span>
+                </div>
+                <div className="row-letter border w-[4rem] h-[4rem] bg-primary-green rounded-lg  border-primary-green text-white flex items-center justify-center font-bold text-[28px]">
+                  <span>L</span>
+                </div>
+                <div className="row-letter border w-[4rem] h-[4rem] bg-primary-orange rounded-lg border-primary-orange text-white flex items-center justify-center font-bold text-[28px]">
+                  <span>A</span>
+                </div>
+                <div className="row-letter border w-[4rem] h-[4rem] bg-primary-orange rounded-lg border-primary-orange text-white flex items-center justify-center font-bold text-[28px]">
+                  <span>M</span>
+                </div>
+                <div className="row-letter  w-[4rem] h-[4rem] bg-filled-gray rounded-lg border-2 border-filled-gray text-white flex items-center justify-center font-bold text-[28px]">
+                  <span>E</span>
+                </div>
+              </div>
+
+              <div className="bg-secondary-gray p-3 rounded-md">
+                <div className="flex items-center gap-2">
+                  <div className="row-letter  w-[2rem] h-[2rem] bg-filled-gray rounded-lg border-2 border-filled-gray text-white flex items-center justify-center font-bold text-[18px]">
+                    <span>E</span>
+                  </div>
+                  <p>E is not in word at all.</p>
+                </div>
+                <div className="flex items-center gap-2 mt-2">
+                  <div className="row-letter border w-[2rem] h-[2rem] bg-primary-orange rounded-lg border-primary-orange text-white flex items-center justify-center font-bold text-[18px]">
+                    <span>A</span>
+                  </div>
+                  <div className="row-letter border w-[2rem] h-[2rem] bg-primary-orange rounded-lg border-primary-orange text-white flex items-center justify-center font-bold text-[18px]">
+                    <span>M</span>
+                  </div>
+                  <p>A & M is in the word but in the wrong spot.</p>
+                </div>
+                <div className="flex items-center gap-2 mt-2">
+                  <div className="row-letter w-[2rem] h-[2rem] bg-primary-green rounded-lg border-2 border-primary-green text-white flex items-center justify-center font-bold text-[18px]">
+                    <span>F</span>
+                  </div>
+                  <div className="row-letter w-[2rem] h-[2rem] bg-primary-green rounded-lg border-2 border-primary-green text-white flex items-center justify-center font-bold text-[18px]">
+                    <span>L</span>
+                  </div>
+                  <p>F & L are in the word and in the correct spot.</p>
+                </div>
+              </div>
+              <div>
+                <p>Another try to find matching letters in the target word.</p>
+              </div>
             </DialogHeader>
           </DialogContent>
         </Dialog>

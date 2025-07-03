@@ -19,14 +19,14 @@ function WordlyGame() {
 
   const applyStyles = (letter: Letter) => {
     if (letter?.isInOrder) {
-      return "border w-[4rem] h-[4rem] bg-primary-green rounded-lg border-2 border-primary-green text-white flex items-center justify-center font-bold text-[28px]";
+      return "row-letter border w-[4rem] h-[4rem] bg-primary-green rounded-lg border-2 border-primary-green text-white flex items-center justify-center font-bold text-[28px]";
     } else if (letter?.presentInWord) {
-      return "border w-[4rem] h-[4rem] bg-primary-orange rounded-lg border-2 border-primary-orange text-white flex items-center justify-center font-bold text-[28px]";
+      return "row-letter border w-[4rem] h-[4rem] bg-primary-orange rounded-lg border-2 border-primary-orange text-white flex items-center justify-center font-bold text-[28px]";
     } else if (letter?.notPresent) {
-      return "border w-[4rem] h-[4rem] bg-filled-gray rounded-lg border-2 border-filled-gray text-white flex items-center justify-center font-bold text-[28px]";
+      return " row-letter border w-[4rem] h-[4rem] bg-filled-gray rounded-lg border-2 border-filled-gray text-white flex items-center justify-center font-bold text-[28px]";
     }
 
-    return "border w-[4rem] h-[4rem] rounded-lg bg-primary-gray border-2 border-border-gray flex items-center justify-center font-bold text-[28px]";
+    return " row-letter border w-[4rem] h-[4rem] rounded-lg bg-primary-gray border-2 border-border-gray flex items-center justify-center font-bold text-[28px]";
   };
 
   const checkLetterOrder = (letter: string, order: number) => {
@@ -143,24 +143,24 @@ function WordlyGame() {
       <section className="w-[25rem]">
         <div className="grid grid-cols-5 gap-3">
           {letters?.[0]?.map((li) => (
-            <div key={li?.id} className={applyStyles(li)}>
+            <div data-animation={li?.value ? "pop" : ""} key={li?.id} className={applyStyles(li)}>
               <span> {li?.value ? li?.value?.toUpperCase() : ""}</span>
             </div>
           ))}
           {letters?.[1]?.map((li) => (
-            <div key={li?.id} className={applyStyles(li)}>
+            <div data-animation={li?.value ? "pop" : ""} key={li?.id} className={applyStyles(li)}>
               {" "}
               {li?.value ? li?.value?.toUpperCase() : ""}
             </div>
           ))}
           {letters?.[2]?.map((li) => (
-            <div key={li?.id} className={applyStyles(li)}>
+            <div data-animation={li?.value ? "pop" : ""} key={li?.id} className={applyStyles(li)}>
               {" "}
               {li?.value ? li?.value?.toUpperCase() : ""}
             </div>
           ))}
           {letters?.[3]?.map((li) => (
-            <div key={li?.id} className={applyStyles(li)}>
+            <div data-animation={li?.value ? "pop" : ""} key={li?.id} className={applyStyles(li)}>
               {" "}
               {li?.value ? li?.value?.toUpperCase() : ""}
             </div>
