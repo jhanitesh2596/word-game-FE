@@ -1,5 +1,5 @@
 import React from "react";
-import { ChartBar, Settings, Info } from "lucide-react";
+import { ChartBar, Info } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -44,29 +44,15 @@ function WordlyHeader() {
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Are you absolutely sure? chart</DialogTitle>
+              <DialogTitle>Stats:</DialogTitle>
               <DialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
+                Coming Soon
               </DialogDescription>
             </DialogHeader>
           </DialogContent>
         </Dialog>
 
-        <Dialog>
-          <DialogTrigger className="bg-secondary-gray transition-colors hover:bg-hover-brown hover:text-hover-text text-light-black font-semibold rounded-lg border-primary-gray  px-3 py-2 cursor-pointer">
-            <Settings />
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Are you absolutely sure? settings</DialogTitle>
-              <DialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </DialogDescription>
-            </DialogHeader>
-          </DialogContent>
-        </Dialog>
+       
         <Dialog>
           <DialogTrigger className="bg-secondary-gray transition-colors hover:bg-hover-brown hover:text-hover-text text-light-black font-semibold rounded-lg border-primary-gray  px-3 py-2 cursor-pointer">
             <Info />

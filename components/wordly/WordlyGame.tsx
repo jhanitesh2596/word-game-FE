@@ -7,7 +7,7 @@ import WinningModal from "./modules/WinningModal";
 import LostModal from "./modules/LostModal";
 
 function WordlyGame() {
-  const [word] = useState("flame");
+  const [word] = useState("order");
   const [letters, setLetters] = useState(initialGridState);
   const [lost, setLost] = useState(false);
   const [won, setWon] = useState(false)

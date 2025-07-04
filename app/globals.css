@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-section-gray: #fbf9f5;
   --color-primary-gray: #fbfcff;
   --color-secondary-gray: #ebedf3;
   --color-light-black: #414a5e;
